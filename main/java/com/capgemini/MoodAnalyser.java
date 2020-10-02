@@ -1,19 +1,24 @@
 package com.capgemini;
 
 public class MoodAnalyser {
-private String message;
-	
+	private String message;
+
 	public MoodAnalyser() {
 	}
-	
+
 	public MoodAnalyser(String message) {
 		this.message = message;
 	}
-	
+
 	public String analyseMood() {
-			if (message.contains("sad"))
-				return "SAD";
-			else
+		try {
+			if (message.contains("Happy"))
 				return "HAPPY";
+			else
+				return "SAD";
+		} catch (NullPointerException e) {
+			return null;
+
 		}
 	}
+}
