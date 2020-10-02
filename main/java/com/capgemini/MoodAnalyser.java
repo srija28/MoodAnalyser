@@ -1,10 +1,19 @@
 package com.capgemini;
 
 public class MoodAnalyser {
-	public String analyseMood(String message) {
+private String message;
+	
+	public MoodAnalyser() {
+	}
+	
+	public MoodAnalyser(String message) {
+		this.message = message;
+	}
+	
+	public String analyseMood() {
 			if (message.contains("sad"))
 				return "SAD";
 			else
-				return null;
+				return "HAPPY";
 		}
 	}
